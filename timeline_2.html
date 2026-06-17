@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fight Guild History</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="timeline.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">FIGHT</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Leadership</a>
+        <a href="timeline.html" class="nav-link nav-link--active">History</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <header class="hero hero--timeline">
+    <div class="hero-stripe"></div>
+    <div class="container hero-inner">
+      <p class="hero-eyebrow">Est. Late 1990s</p>
+      <h1 class="hero-title">30 Years<br>of Fight</h1>
+      <div class="hero-divider"></div>
+      <p class="hero-blurb">
+        From Ultima Online Beta to the present day — hover over any event to read the story behind it.
+      </p>
+    </div>
+  </header>
+
+  <!-- ── TIMELINE ── -->
+  <section class="timeline-section">
+    <div class="container">
+
+      <div class="timeline">
+        <div class="timeline-spine"></div>
+
+        <!-- ✏️ EDIT: Each .timeline-event is one entry.
+             - Change data-year to the year
+             - Change .tl-title to the event name
+             - Change .tl-game to the game/context
+             - Change .tl-body to the full story (shows on hover)
+             - Add or remove .timeline-event blocks as needed
+             - Alternate sides automatically via CSS (odd = left, even = right) -->
+
+        <div class="timeline-event" data-year="1997">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-preview">
+              <span class="tl-year">1997</span>
+              <h3 class="tl-title">The Beginning</h3>
+              <p class="tl-game">Ultima Online Beta</p>
+            </div>
+            <div class="tl-popup">
+              <span class="tl-popup-year">1997</span>
+              <h3 class="tl-popup-title">The Beginning</h3>
+              <p class="tl-popup-game">Ultima Online Beta</p>
+              <p class="tl-body">✏️ Add your story here. What happened? Who was there? What made this moment worth remembering after 30 years?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-event" data-year="1999">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-preview">
+              <span class="tl-year">1999</span>
+              <h3 class="tl-title">Dark Age of Camelot</h3>
+              <p class="tl-game">DAoC Launch</p>
+            </div>
+            <div class="tl-popup">
+              <span class="tl-popup-year">1999</span>
+              <h3 class="tl-popup-title">Dark Age of Camelot</h3>
+              <p class="tl-popup-game">DAoC Launch</p>
+              <p class="tl-body">✏️ Add your story here. The guild found a new home in DAoC — what do you remember most about this era?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-event" data-year="2004">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-preview">
+              <span class="tl-year">2004</span>
+              <h3 class="tl-title">Vanilla WoW — Day One</h3>
+              <p class="tl-game">World of Warcraft</p>
+            </div>
+            <div class="tl-popup">
+              <span class="tl-popup-year">2004</span>
+              <h3 class="tl-popup-title">Vanilla WoW — Day One</h3>
+              <p class="tl-popup-game">World of Warcraft</p>
+              <p class="tl-body">✏️ Add your story here. Fight planted its flag in Azeroth on launch day. Who logged in first? What server? What was the plan?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-event" data-year="2007">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-preview">
+              <span class="tl-year">2007</span>
+              <h3 class="tl-title">The Burning Crusade</h3>
+              <p class="tl-game">World of Warcraft</p>
+            </div>
+            <div class="tl-popup">
+              <span class="tl-popup-year">2007</span>
+              <h3 class="tl-popup-title">The Burning Crusade</h3>
+              <p class="tl-popup-game">World of Warcraft</p>
+              <p class="tl-body">✏️ Add your story here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-event" data-year="2008">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-preview">
+              <span class="tl-year">2008</span>
+              <h3 class="tl-title">Wrath of the Lich King</h3>
+              <p class="tl-game">World of Warcraft</p>
+            </div>
+            <div class="tl-popup">
+              <span class="tl-popup-year">2008</span>
+              <h3 class="tl-popup-title">Wrath of the Lich King</h3>
+              <p class="tl-popup-game">World of Warcraft</p>
+              <p class="tl-body">✏️ Add your story here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-event" data-year="2016">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-preview">
+              <span class="tl-year">2016</span>
+              <h3 class="tl-title">Emerald Nightmare — 7/7M</h3>
+              <p class="tl-game">Legion</p>
+            </div>
+            <div class="tl-popup">
+              <span class="tl-popup-year">2016</span>
+              <h3 class="tl-popup-title">Emerald Nightmare — 7/7M</h3>
+              <p class="tl-popup-game">World of Warcraft: Legion</p>
+              <p class="tl-body">✏️ Add your story here. Full clear of Emerald Nightmare on Mythic — what was the final boss moment like?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-event" data-year="2017">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-preview">
+              <span class="tl-year">2017</span>
+              <h3 class="tl-title">Antorus — 11/11M</h3>
+              <p class="tl-game">Legion</p>
+            </div>
+            <div class="tl-popup">
+              <span class="tl-popup-year">2017</span>
+              <h3 class="tl-popup-title">Antorus, The Burning Throne — 11/11M</h3>
+              <p class="tl-popup-game">World of Warcraft: Legion</p>
+              <p class="tl-body">✏️ Add your story here. A full Mythic clear of Antorus — one of the guild's biggest achievements.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-event" data-year="2020">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-preview">
+              <span class="tl-year">2020</span>
+              <h3 class="tl-title">Castle Nathria — 8/10M</h3>
+              <p class="tl-game">Shadowlands</p>
+            </div>
+            <div class="tl-popup">
+              <span class="tl-popup-year">2020</span>
+              <h3 class="tl-popup-title">Castle Nathria — 8/10M</h3>
+              <p class="tl-popup-game">World of Warcraft: Shadowlands</p>
+              <p class="tl-body">✏️ Add your story here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-event" data-year="2021">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-preview">
+              <span class="tl-year">2021</span>
+              <h3 class="tl-title">Sanctum of Domination — 8/10M</h3>
+              <p class="tl-game">Shadowlands</p>
+            </div>
+            <div class="tl-popup">
+              <span class="tl-popup-year">2021</span>
+              <h3 class="tl-popup-title">Sanctum of Domination — 8/10M</h3>
+              <p class="tl-popup-game">World of Warcraft: Shadowlands</p>
+              <p class="tl-body">✏️ Add your story here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-event" data-year="2024">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-preview">
+              <span class="tl-year">2024</span>
+              <h3 class="tl-title">Nerub-ar Palace — 6/8M</h3>
+              <p class="tl-game">The War Within</p>
+            </div>
+            <div class="tl-popup">
+              <span class="tl-popup-year">2024</span>
+              <h3 class="tl-popup-title">Nerub-ar Palace — 6/8M</h3>
+              <p class="tl-popup-game">World of Warcraft: The War Within</p>
+              <p class="tl-body">✏️ Add your story here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-event" data-year="2025">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-preview">
+              <span class="tl-year">2025</span>
+              <h3 class="tl-title">Liberation of Undermine — 8/8M</h3>
+              <p class="tl-game">The War Within</p>
+            </div>
+            <div class="tl-popup">
+              <span class="tl-popup-year">2025</span>
+              <h3 class="tl-popup-title">Liberation of Undermine — 8/8M</h3>
+              <p class="tl-popup-game">World of Warcraft: The War Within</p>
+              <p class="tl-body">✏️ Add your story here. Full Mythic clear — what was the kill shot moment?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-event" data-year="2025">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-preview">
+              <span class="tl-year">2025</span>
+              <h3 class="tl-title">Manaforge Omega — 8/8M</h3>
+              <p class="tl-game">The War Within</p>
+            </div>
+            <div class="tl-popup">
+              <span class="tl-popup-year">2025</span>
+              <h3 class="tl-popup-title">Manaforge Omega — 8/8M</h3>
+              <p class="tl-popup-game">World of Warcraft: The War Within</p>
+              <p class="tl-body">✏️ Add your story here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-event" data-year="2026">
+          <div class="tl-dot tl-dot--current"></div>
+          <div class="tl-card tl-card--current">
+            <div class="tl-preview">
+              <span class="tl-year">NOW</span>
+              <h3 class="tl-title">VS / DR / MQD — 8/9M</h3>
+              <p class="tl-game">The War Within</p>
+            </div>
+            <div class="tl-popup">
+              <span class="tl-popup-year">Present</span>
+              <h3 class="tl-popup-title">VS / DR / MQD — 8/9M</h3>
+              <p class="tl-popup-game">World of Warcraft: The War Within</p>
+              <p class="tl-body">✏️ The story is still being written. Add your notes here as progress continues.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-text">© 2025 Fight Leadership Team. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
