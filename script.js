@@ -56,3 +56,14 @@
     createObserver();
   });
 })();
+// ── Thumbnail injection ──
+document.querySelectorAll('.timeline-event[data-thumb]').forEach((event) => {
+  const card = event.querySelector('.tl-card');
+  const preview = event.querySelector('.tl-preview');
+  const thumb = document.createElement('img');
+  thumb.src = event.dataset.thumb;
+  thumb.alt = '';
+  thumb.className = 'tl-thumb';
+  preview.insertBefore(thumb, preview.firstChild);
+  card.classList.add('has-thumb');
+});
