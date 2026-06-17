@@ -1,0 +1,306 @@
+/* ─────────────────────────────────────────
+   NAVIGATION (shared across both pages)
+───────────────────────────────────────── */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 10, 11, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 26px;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+.nav-link--active {
+  color: var(--text-primary);
+  border-bottom-color: var(--gold);
+}
+
+/* ─────────────────────────────────────────
+   TIMELINE HERO VARIANT
+───────────────────────────────────────── */
+.hero--timeline {
+  padding-top: 72px;
+}
+
+/* ─────────────────────────────────────────
+   TIMELINE SECTION
+───────────────────────────────────────── */
+.timeline-section {
+  padding: 80px 0 120px;
+  background: var(--black);
+}
+
+/* ─────────────────────────────────────────
+   TIMELINE SPINE + LAYOUT
+───────────────────────────────────────── */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-spine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--blue) 8%,
+    var(--border) 15%,
+    var(--border) 85%,
+    var(--gold) 92%,
+    transparent
+  );
+}
+
+/* ─────────────────────────────────────────
+   TIMELINE EVENT
+───────────────────────────────────────── */
+.timeline-event {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: calc(50% + 40px);
+  margin-bottom: 48px;
+}
+
+/* Even events go on the right side */
+.timeline-event:nth-child(even) {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: calc(50% + 40px);
+}
+
+/* ─────────────────────────────────────────
+   DOT
+───────────────────────────────────────── */
+.tl-dot {
+  position: absolute;
+  left: 50%;
+  top: 22px;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--dark-card);
+  border: 2px solid var(--border);
+  z-index: 2;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.tl-dot--current {
+  background: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 0 12px rgba(212, 160, 23, 0.5);
+}
+
+.timeline-event:hover .tl-dot {
+  border-color: var(--gold);
+  background: var(--gold);
+}
+
+/* ─────────────────────────────────────────
+   CARD (preview state)
+───────────────────────────────────────── */
+.tl-card {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  background: var(--dark-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.2s;
+  overflow: visible;
+}
+
+.tl-card--current {
+  border-color: rgba(212, 160, 23, 0.4);
+}
+
+.tl-card:hover {
+  border-color: var(--gold);
+}
+
+.tl-preview {
+  padding: 18px 20px;
+}
+
+.tl-year {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.tl-title {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.tl-game {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ─────────────────────────────────────────
+   POPUP (hover state)
+   Left-side cards: popup opens to the RIGHT
+   Right-side cards: popup opens to the LEFT
+───────────────────────────────────────── */
+.tl-popup {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 16px);   /* default: left-side card → popup goes right */
+  width: 300px;
+  background: var(--dark);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 50;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* Right-side cards: popup opens to the LEFT */
+.timeline-event:nth-child(even) .tl-popup {
+  left: auto;
+  right: calc(100% + 16px);
+  transform: translateX(8px);
+}
+
+.tl-card:hover .tl-popup {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.tl-popup-year {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.tl-popup-title {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.tl-popup-game {
+  font-size: 12px;
+  color: var(--blue-light);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.tl-body {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — collapse to single column
+───────────────────────────────────────── */
+@media (max-width: 760px) {
+  .timeline-spine {
+    left: 20px;
+  }
+
+  .timeline-event,
+  .timeline-event:nth-child(even) {
+    justify-content: flex-start;
+    padding-left: 52px;
+    padding-right: 0;
+  }
+
+  .tl-dot {
+    left: 20px;
+  }
+
+  .tl-card {
+    max-width: 100%;
+  }
+
+  /* On mobile, popup opens below the card instead */
+  .tl-popup,
+  .timeline-event:nth-child(even) .tl-popup {
+    position: static;
+    width: 100%;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    display: none;
+    margin-top: 8px;
+    box-shadow: none;
+  }
+
+  .tl-card:hover .tl-popup {
+    display: block;
+  }
+}
